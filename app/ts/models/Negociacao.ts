@@ -6,4 +6,10 @@ export class Negociacao {
 
         return this.quantidade * this.valor;
     }
+
+    
+    paraTexto(){
+        console.log("ENTROU AQI CARAI");
+    }
+
 }

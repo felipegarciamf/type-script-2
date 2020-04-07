@@ -1,7 +1,7 @@
 System.register([], function (exports_1, context_1) {
     "use strict";
-    var Negociacao;
     var __moduleName = context_1 && context_1.id;
+    var Negociacao;
     return {
         setters: [],
         execute: function () {
@@ -13,6 +13,9 @@ System.register([], function (exports_1, context_1) {
                 }
                 get volume() {
                     return this.quantidade * this.valor;
+                }
+                paraTexto() {
+                    console.log("ENTROU AQI CARAI");
                 }
             };
             exports_1("Negociacao", Negociacao);
