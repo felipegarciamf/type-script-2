@@ -1,5 +1,5 @@
 export abstract class Imprimivel {
 
-    abstract paraText(): void;
-    
+    abstract paraTexto(): void;
+
 }
