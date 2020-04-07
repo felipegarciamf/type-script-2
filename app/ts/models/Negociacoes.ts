@@ -1,8 +1,10 @@
+import { Igualavel } from './Igualavel';
 import { Negociacao } from './Negociacao';
 import { logarTempoDeExecucao } from '../helpers/decorators/index';
 import { Imprimivel } from './Imprimivel';
 
-export class Negociacoes extends Imprimivel{
+export class Negociacoes implements Imprimivel, Igualavel<Negociacoes>{
+
 
     private _negociacoes: Negociacao[] = [];
 
@@ -18,5 +20,9 @@ export class Negociacoes extends Imprimivel{
 
     paraTexto(): void {
         console.log("teste 1");
+    }
+
+    ehIgual(negociacoes: Negociacoes): boolean {
+        return JSON.stringify(this._negociacoes) == JSON.stringify(negociacoes.paraArray())
     }
 }
